@@ -1,0 +1,26 @@
+Respuestas Homework
+
+Variables: son objetos o espacios de memoria que nos permiten guardar datos de todo
+tipo para poder ser utlizados posteriormente para hacer calculos o mostrar 
+cierta informacion 
+
+Strings: es un tipo de datos que consiste en cadenas o bloques de texto.
+
+Funciones: son objtos que permiten agrupara bloques de instrucciones o comandos
+que seran utilizados mas de una ves.  Reciben como entrada variables, llamadas
+parametros, para efectuar calculos con las mismas o tomar desiciones para
+controlar el flujo de ejecucion de los programas. Retornan una respuesta a traves 
+de la instruccion Return.
+
+Declaraciones If:  es una sentencia o instruccion, que permite controlar el flujo
+de ejecucion del codigo evaluando una condicion y de acuerdo a si la misma es 
+verdadera o falsa, ejecutar bloques de instrucciones diferentes.
+
+Valores Booleanos: true, false.  son los dos valores posibles que puede tener una
+variable de tipo booleano.  verdadero o falso.   0 o 1.  O tambien el resultado de 
+una expresion de compracion. Y de acuerdo a dichos valores controlar el flujo de
+ejecuion del codigo dentre de los programas.
+
+
+
+
