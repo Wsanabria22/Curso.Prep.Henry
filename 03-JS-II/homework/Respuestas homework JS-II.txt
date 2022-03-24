@@ -1,0 +1,74 @@
+for:
+Es una sentencia que nos permite crear un bucle, para ejecutar un bloque de codigo
+varias veces una y otra ves de forma ciclica hasta que se cumpla una codicione
+que se establece a traves de una variable que actua como un contador del numero
+de veces que se ejecuta el bloque de codigo. Cuando la variable contador alcanza
+el valor especificado por la condicion, deja de ejecutarse el bloque de codigo.
+Su estructura es:
+
+for (var i = 0; i < 10; i++) {
+  bloque de codigo
+}
+ 
+La variable i es el contador que inicia en cero y ejecuta el bloque de codigo 
+mientras que i sea menor que 10. Una vez i llegue al valor de 10 (que se va 
+incrementando con la instruccion i++), deja de ejecutarse
+el bloque de codigo y continua con la ejecucion del resto de codigo.
+
+&&:
+Es un operador logico que permite evaluar si la conbinacion de dos expresiones de
+igualdad dan verdadero o falso.  La regla utlizada es que la combinacion de las
+expresiones es verdadera si las dos igualdades son verdaderas, de lo contrario,
+si alguna de las dos igualdades es falsa la conbinacion de las expresiones
+da como resultado falso.
+
+ej:
+
+if ( 10 > 8 && 8 > 4 ) {
+  El resultado combinado de las dos expresiones es verdadero porque las dos 
+  igualdades dan como resultado verdadero. y se ejecuta el codigo dentre del if
+}
+
+if ( 10 > 8 && 8 < 4 ) {
+  El resultado combinado de las dos expresiones es falso porque la segunda 
+  igualdad dan como resultado falso. y no se ejecuta el codigo dentre del if
+}
+
+
+||:
+Es un operador logico que permite evaluar si la conbinacion de dos expresiones de
+igualdad dan verdadero o falso.  La regla utlizada es que la combinacion de las
+expresiones es verdadera si al menos una de las dos igualdades es verdadera, y
+si las las dos igualdades son falsas la conbinacion de las expresiones
+da como resultado falso.
+
+ej:
+
+if ( 10 = 8 || 8 < 4 ) {
+  El resultado combinado de las dos expresiones es falso porque las dos 
+  igualdades dan como resultado falso. y no se ejecuta el codigo dentre del if
+}
+
+if ( 10 > 8 && 8 = 4 ) {
+  El resultado combinado de las dos expresiones es verdadero porque la primera 
+  igualdad da como resultado verdadero. y se ejecuta el codigo dentre del if
+}
+
+!:
+Es un operador logico que se utliza para cambiar el resultado de una expresion de 
+igualdad de veradero a faso o de falso a veradadero. Es decir el valor booleano 
+contrario
+
+!veradero sera igual a falso
+y
+!falso sera igual a veradero.
+
+Ej:
+
+if (!(8 < 4)) {
+    Devolvera verdadero y el codigo dentro del if se ejecutara
+}
+
+if (!(8 > 4)) {
+    Devolvera faslo y el codigo dentro del if no se ejecutara
+}
