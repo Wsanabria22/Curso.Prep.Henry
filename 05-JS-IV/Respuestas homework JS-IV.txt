@@ -1,0 +1,92 @@
+OBJETLOS
+Son estructuras de informacion que pueden contener multiples elementos de datos
+de diferente tipo, e inclusive contener otros ARRAYS y tambien funciones.
+Que se relacionan y desciben una solo cosa u objeto. Se define el objeto con un nombre Y
+diferentes propiedades que describen el objeto. Cada propiedad tiene un nombre y un dato,
+Arreglo, funcion u otro objeto.
+
+Ejemplo:
+
+Si queremos crar un objeto para describir a un estudiante en cuanto a sus caracteristicas,
+como nombre, sexo, curso, edad, etc. Definiriamos de la siguiente forma
+
+var estudiante = {
+    nombre : 'William'
+    edad : 54,
+    sexo : 'masculino',
+    activo : true,
+    hobbies : ['Futball', 'lectura', 'musica']
+}
+
+METODOS
+los objetos, tambien pueden tener metodos, que no son mas que funciones, que hacen algo con
+las otras propiedades del objeto, como mostrarlas o hacer calculos con las mismas y 
+devolver el resultado.
+
+Ejemplo: tomando el anterior le agregamos un metodo que de un saludo.
+
+var estudiante = {
+    nombre : 'William'
+    edad : 54,
+    sexo : 'masculino',
+    activo : true,
+    hobbies : ['Futball', 'lectura', 'musica'],
+    saludo : funcion() { console.log('Hola soy William) }
+}
+
+O utilizando la palabra clave "this", podemos utilizar el valor de las otras propiedades:
+
+var estudiante = {
+    nombre : 'William'
+    edad : 54,
+    sexo : 'masculino',
+    activo : true,
+    hobbies : ['Futball', 'lectura', 'musica'],
+    saludo : funcion() { console.log('Hola soy ' + this.nombre) }
+}
+
+
+ACCESO A LOS ELEMENTOS:
+A los diferentes propiedades se accede a traves del nombre el objeto y el nombre de la 
+propiedad en dos formas o notaciones:
+
+Notacion con punto:
+
+estudiante.nombre
+
+Notacion con corchetes:
+
+estudiante['nombre']
+
+esta ultima notacion se puede usar una variable para indicar el nombre de la propiedad
+a recuperar:
+
+var propiedad = 'nombre';
+esturdiante[propiedad];
+
+
+
+
+ASIGNACION DE PROPIEDADES
+
+Utilizando cualquiera de las dos notaciones (punto o corchetes) se pueden asignar 
+propiedades adicionales:
+
+Por ejemplo que queremos adicionar una propiedad que indique el curso:
+
+estudiante.grado = 10;
+estudiante['grado']=10:
+
+
+
+RECORRER UN OBJETO
+
+Finalmente podemos recorrer un objeto con la sentencia FOR IN de bucle de javascript. 
+Definiendo una variable dentro de la misma que valla conteniendo cada propiedad:
+
+
+for ( let propiedad in estudiante ) {
+    console.log(estudiante[propiedad]);
+    console.log(propiedad);
+}
+
