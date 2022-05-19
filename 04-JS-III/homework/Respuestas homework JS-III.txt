@@ -1,0 +1,77 @@
+ARRAYS
+Son estructuras de informacion que pueden contener multiples elementos de datos
+de diferente tipo, e inclusive contener otros ARRAYS y tambien funciones.
+A diferencia de las variables que solo pueden contener un dato de un tipo especifico.
+
+
+Se definen como las variables con un nombre, pero especificando los elementos dentro
+de parentesis cuadrados "[ ]".  y se separan los elementos por medio de comas ",".
+
+Ejemplo:
+
+var arreglo = [ 1, 2, 3, 4, 'Carlos', 'Mario', [a, b, c]];
+
+vemos en este ejemplo un array con 7 elementos de diferentes tipos.
+
+ACCESO A LOS ELEMENTOS:
+A los diferentes elementos se accede a traves de un inidice numerico que inidica la posicion del elemento dentro del array. 
+La primera posicion de un array se identifica con el numero 0 y de ahi en adelante,
+se incrementa de 1 en 1 hasta acanzar la ultima posicion.
+
+A taves del indice numerico se puede recuperar el dato o elemento de la poscion y almacenarlo en una variable o efectuar operaciones de el mismo.
+
+var num1 = arreglo[0] // 1
+var nombre1 = arreglo[5] // Mario
+
+ASIGNACION DE ELEMENTOS
+A traves del indice numerico se puede asignar el valor, dato o elemento especifico.
+
+arreglo[5] = 'Martha' cambia el valor del elemento 5 de Mario a Martha
+
+Tambien se pueden asignar todos los elementos de una sola vez:
+var arreglo = [ 1, 2, 3, 4, 'Carlos', 'Mario', [a, b, c]];
+
+INFORMACION DEL NUMERO DE ELEMENTOS:
+Para saber el numero de elemento de un array se utiliza el metodo length.
+
+numeroDeElementos = arreglo.length;
+
+ADICIONAR Y ELIMINAR ELEMENTOS
+Se hace a traves de los metodos push para adicionar al final del array y pop para eliminar el ultimo elemento.
+
+Ej:
+
+arreglo.push('Juan') // adiciona Juan como ultimo elemento
+
+arreglo = [ 1, 2, 3, 4, 'Carlos', 'Mario', [a, b, c], 'Juan'];
+
+arreglo.pop() // elimina el ultimo elemento 'Juan'
+
+arreglo = [ 1, 2, 3, 4, 'Carlos', 'Mario', [a, b, c]];
+
+pop ademas de eliminar el elemento lo devuelve por si se quiere almancenar en una
+variable para hacer operaciones con el mismo.
+
+Tambien se pueden adicionar y eliminar elementos desde el principio de array con
+los metodos unshift: que adicionara un elemento al principio del array y shift; que eliminara el primer elemento del array
+
+Ej:
+
+arreglo.unshift('Juan') // adiciona Juan como primer elemento
+
+arreglo = [ 'Juan', 1, 2, 3, 4, 'Carlos', 'Mario', [a, b, c]];
+
+arreglo.shift() // elimina el primer elemento 'Juan'
+
+arreglo = [ 1, 2, 3, 4, 'Carlos', 'Mario', [a, b, c]];
+
+RECORRER UN ARRAY
+
+Finalmente podemos recorrer un arreglo con algumna de las sentencias de bucle de javascript.
+
+For o while o do while.
+
+for ( i=0; i < arreglo.length -1; i++ >) {
+    console.log(arreglo[i]);
+}
+
