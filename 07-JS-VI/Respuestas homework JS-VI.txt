@@ -1,0 +1,29 @@
+FUNCIONES CALLBACK
+
+Son funciones que se pueden pasar como argumento de otras funciones para que sean ejecutadas y 
+adicionalmente se le puedan pasar parametros para que sean ejecutadas con los mismos.
+
+Ejemplo:
+
+Creamos funciones para saludar y despedirse. 
+
+funcion saludar(persona) {
+    return 'Hola ' + persona;
+}
+
+funcion despedirse(persona) {
+    return 'Hasta luego ' + persona;
+}
+
+Y construimos una funcion para que ejecute las funciones anteriores:
+
+funcion conversar(persona, cb) {
+    return cb(persona);
+}
+
+Y Finalmente invocamos las funciones:
+
+conversar('William', saludar); // 'Hola William'
+conversarU('William', despedirse);  // 'Hasta luego William'
+
+
