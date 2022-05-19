@@ -1,0 +1,81 @@
+PROTOTYPE
+
+En JS todos los objetos tienen una referencia a un objeto superior llamado prototipo.  
+Dicho prototipo contiene metodos y propiedades que lo definen y que trabajan sobre 
+las propiedades del objeto.
+Estos prototipos permiten a las clases establecer en memoria los dirferentes metodos
+, que pueden ser accedidos o compartidos por todos los objetos creados a partir
+de dicha clase. Permitiendo de esta forma hacer eficiente el uso de la memoria.
+
+Es por esto que cuando creamos por ejemplo un array, tenemos una serie de metodos nativos,
+los cuales tenemos a disposion para poder trabajar sobre los arreglos.
+
+Los metodos de PROTOTYPE, tienen acceso a la palabra clave this, de tal forma que pueden hacer
+referencia los objetos creados a partir de la clase y acceder a sus propiedades para poder
+actualizarlas, crear nuevas y hacer operaciones con las mismas.
+
+Nosotros tambien podemos crear nuestros propios prototipos de objetos, a traves de las 
+funciones constructoras, la cuales contendran todas las propiedades y metodos que determina 
+dicha clase de objetos.
+
+Es por esto que JS tambien permite crear un objeto nuevo que contenga todas las propiedades 
+y metodos de un objeto existente a traves del metodo Object.create().
+
+
+Ejemplo:
+
+Si queremos crar una clase para describir una persona en cuanto a sus caracteristicas,
+como nombre, sexo, curso, edad, etc. Definiriamos de la siguiente forma
+
+function Persona(nombre, apellido, edad, sexo, ciudad) {
+    this.nombre = nombre,
+    this.apellido = apellido,
+    this.edad = edad,
+    this.sexo = sexo,
+    this.ciudad = ciudad
+}
+
+Persona.prototype.saludar = funcion(){
+   console.log('Soy '+ this.nombre + 'de '+ this.ciudad); 
+}
+
+Y ahora queremos crear una clase Empleado, que contenga o herede la clase persona:
+
+
+funcion Empleado(nombre, apellido, edad, sexo, ciudad, cargo) {
+    // Heredamos el contructor de Persona
+    Persona.call(this, nombre, apellido, edad, sexo, ciudad);
+
+    // Definimos las propiedades particulares de Empleado
+    this.cargo = cargo;
+    this.empresa = 'Soy Henry';
+}
+
+// Copiamos el prototype de Persona, para incluir los metodos de dicha clase.
+Empleado.prototype = Object.create(Persona.prototype);
+
+// Reestablecemos el constructor de Empleado que fue sobrescrito en el paso anterior.
+Empleado.prototype.constructor = Empledo;
+
+
+CONSTRUCTORS
+
+funcion constructor, son un tipo de funcion que nos permiten constuir los objetos y clases de objetos.
+Ejemplo: creamos un objeto llamado Persona:
+
+function Persona () {
+    this.nombre = 'William',
+    this.apellido = 'Sanabria'
+}
+
+Como se observa, dicha funcion no retorna nada. Solo define la plantilla de un objeto 
+con sus propiedades.
+
+Ahora creamos el objeto con la palabra clave new
+
+var william = new Persona();
+console.log(william);
+
+Las funciones constructoras pueden recibir parametros, para especificar las propiedades de 
+los objetos a crear.
+
